@@ -33,12 +33,15 @@
 				<div class="form-group row">
 					<label for="userid" class="col-sm-2 col-form-label">아이디</label>
 					<div class="col-sm-10">
-						<input style="width: 400px; height: 40px; float: left;"
+						<input style="width: 400px; height: 40px;  display: block;"
 							type="text" class="form-control" id="userid" name="userid"
 							placeholder="아이디를 입력해주세요.">
-						<button class="btn btn-dark" style="margin-left: 10px;"
+							<span
+							style="font-size: small; color: red; float: left; ">5-10자리의 영문/숫자만
+							가능합니다.</span>
+						<button class="btn btn-dark" style="margin: -40px 0 0 200px;"
 							type="button" id="idChk" onclick="fn_idChk();" value="N">중복확인</button>
-
+						
 					</div>
 				</div>
 				<hr color="lightgray">
@@ -67,10 +70,12 @@
 				<div class="form-group row">
 					<label for="email" class="col-sm-2 col-form-label">이메일</label>
 					<div class="col-sm-10">
-						<input style="width: 400px; height: 40px; float: left;"
+						<input style="width: 400px; height: 40px; display: block;"
 							type="text" class="form-control" id="userEmail" name="userEmail"
 							placeholder="이메일을 입력해주세요.">
-						<button type="button" id="emailChk" style="margin-left: 10px;"
+						<span
+							style="font-size: small; color: red; float: left; ">이메일 형식(ggg@ggg.com)으로 정확히 입력해주세요. 인증에 필요합니다.</span>
+						<button type="button" id="emailChk" style="margin: -40px 0 0 -17px;"
 							class="btn btn-dark" onclick="fn_emailChk();" value="N">중복확인</button>
 					</div>
 
@@ -202,7 +207,7 @@
 
 				$("#submit").on("click",function() {
 
-				var useridCheck = RegExp(/^[A-Za-z0-9_\-]{5,20}$/);
+				var useridCheck = RegExp(/^[A-Za-z0-9_\-]{5,10}$/);
 				var userpwCheck = RegExp(/^(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^*()\-_=+\\\|\[\]{};:\'",.<>\/?]).{8,15}$/);
 				var userNameCheck = RegExp(/^[가-힣a-z]{2,6}$/);
 				var userEmailCheck = RegExp(/^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/);

@@ -46,7 +46,7 @@ public class CommonServiceImpl implements CommonService {
 				"<a href='http://localhost:8080/emailConfirm?userEmail=" + vo.getUserEmail() +
 				"&key=" + key +
 				"' target='_blenk'>이메일 인증 확인</a>");
-		sendMail.setFrom("koittih@gmail.com", "운영자"); // 보낸이
+		sendMail.setFrom("koittih@gmail.com", "관리자"); // 보낸이
 		sendMail.setTo(vo.getUserEmail()); // 받는이
 		sendMail.send();
 	}
@@ -78,7 +78,7 @@ public class CommonServiceImpl implements CommonService {
 				"<a href='http://localhost:8080/emailConfirm?userEmail=" + vo.getUserEmail() +
 				"&key=" + key +
 				"' target='_blenk'>이메일 인증 확인</a>");
-		sendMail.setFrom("koittih@gmail.com", "운영자"); // 보낸이
+		sendMail.setFrom("koittih@gmail.com", "관리자"); // 보낸이
 		sendMail.setTo(vo.getUserEmail()); // 받는이
 		sendMail.send();
 	}

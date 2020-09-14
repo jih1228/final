@@ -23,4 +23,6 @@ public class MemberVO {
 	
 	
 	private List<AuthVO> authList;
+	
+	
 }

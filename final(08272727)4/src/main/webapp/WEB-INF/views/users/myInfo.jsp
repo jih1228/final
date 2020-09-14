@@ -217,20 +217,7 @@
 				var userPhoneCheck = RegExp(/^01[0179][0-9]{7,8}$/);
 				var hobbyCheck = false;
 
-												if ($("#userid").val() == "") {
-													alert("아이디를 입력해주세요.");
-													$("#userid").focus();
-													return false;
-												}
-
-												//아이디 유효성검사 
-												if (!useridCheck.test($(
-														"#userid").val())) {
-													alert("아이디 형식에 맞게 입력해주세요");
-													$("#userid").val("");
-													$("#userid").focus();
-													return false;
-												}
+												
 
 												if ($("#userpw").val() == "") {
 													alert("비밀번호를 입력해주세요.");
@@ -344,34 +331,7 @@
 											});
 
 						});
-		//아이디 중복 체크
-		function fn_idChk() {
-
-			$.ajax({
-				url : "/idChk",
-				type : "get",
-				dataType : "json",
-				data : {
-					userid : $("#userid").val()
-				},
-				success : function(data) {
-					console.log('data:' + data);
-					if (data == 1) {
-						alert("중복된 아이디입니다.");
-					} else if (data == 0) {
-
-						if ($("#userid").val() == "") {
-							alert("아이디를 입력해주세요.");
-							return false;
-						}
-						$("#idChk").attr("value", "Y");
-						alert("사용가능한 아이디입니다.")
-					}
-				}
-			}); // ajax 끝
-
-		}
-	</script>
+		
 
 
 	<script type="text/javascript">

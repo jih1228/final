@@ -12,6 +12,7 @@
 <!-- <bean id="customPasswordEncoder" class="org.zerock.security.CustomNoOpPasswordEncoder"></bean> -->
 <bean id="bcryptPasswordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder" />
 <bean id="customUserDetailsService" class="org.gasan.security.CustomUserDetailsService"></bean>
+    
 
 <security:http>
 

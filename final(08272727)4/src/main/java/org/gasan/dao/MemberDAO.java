@@ -4,8 +4,6 @@ import org.gasan.domain.MemberVO;
 
 public interface MemberDAO {
 	
-	 
-	
 	//가입과 권한 조인
 	public MemberVO read(String userid);
 	
@@ -29,6 +27,7 @@ public interface MemberDAO {
 	//이메일 인증키
 	public void createAuthKey(String userEmail, String authKey) throws Exception;
 
+	
 	//이메일 인증
 	public void userAuth(String userEmail) throws Exception;
 	
@@ -36,13 +35,18 @@ public interface MemberDAO {
 	//로그인
 	public MemberVO login(MemberVO vo) throws Exception;
 	
+	
 	//패스워드 체크
 	public boolean passChk (MemberVO vo) throws Exception;
+	
 	
 	//이메일 중복 체크
 	public int emailChk(MemberVO vo) throws Exception;
 	
+	
 	//휴대폰 번호 중복 체크
 	public int phoneChk(MemberVO vo) throws Exception;
+	
+	
 }
 

@@ -23,6 +23,7 @@ public class CustomUserDetailsService implements UserDetailsService {
 	@Override
 	public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
 		// TODO Auto-generated method stub
+		
 		log.warn("Load User By UserName :" + userName);
 		
 		//userName means userid
